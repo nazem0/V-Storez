@@ -1,0 +1,19 @@
+{
+  "Email":"Email",
+  "PhoneNumber":"Phone number",
+  "Password":"Password",
+  "RememberMe":"Remember me",
+  "AlreadyHaveAccount":"Already have an account?",
+  "DontHaveAccount":"Don't have an account?",
+  "Register":"Register",
+  "Login":"Login",
+  "ForgotPassword": "Forgot password?",
+  "PersonalInfo":"Personal information",
+  "Credentials": "Credentials",
+  "FirstName":"First name",
+  "LastName":"Last name",
+  "InvalidEmail":"Invalid email",
+  "PasswordLength":"",
+  "Done":"Done",
+  "InvalidCredentials":"Invalid Credentials"
+}

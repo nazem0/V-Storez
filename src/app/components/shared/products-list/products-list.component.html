@@ -1,0 +1,29 @@
+<div class="position-relative">
+    <div class="row m-0 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 g-4 justify-content-center align-items-between pagination-padding">
+        <div *ngFor="let product of productsPage">
+            <mat-card [routerLink]="['/product/'+product.id]">
+                <mat-card-header>
+                    <mat-card-title>{{product.title}}</mat-card-title>
+                    <mat-card-subtitle>{{product.categoryId}}</mat-card-subtitle>
+                </mat-card-header>
+
+                <div class="card-image-container">
+                    <img matCardImage [src]="product.pictures[0]">
+                </div>
+
+                <mat-card-content>
+                    <p>{{product.price | currency : "EGP" : "symbol-narrow"}}</p>
+                </mat-card-content>
+                <!-- <mat-card-actions>
+                        <button class="w-75 mx-auto" mat-raised-button color="primary">Details</button>
+                    </mat-card-actions> -->
+                <!-- <mat-card-footer>
+                        Footer
+                    </mat-card-footer> -->
+            </mat-card>
+        </div>
+    </div>
+    <p-paginator locale="ar-EG" class="position-fixed bottom-0 w-100" (onPageChange)="onPageChange($event)" [first]="paginationConfig.first" [rows]="paginationConfig.rows" [totalRecords]="products.length"
+        [rowsPerPageOptions]="[4,8,12]"></p-paginator>
+
+</div>

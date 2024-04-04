@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --primary-bg-color:#e8f1ff;
+    --ng-primary-color:#3f51b5;
+}
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-form-field {
+    width: 100%;
+    /* Optional: Adjust the width as needed */
+}
+
+img {
+    max-width: 100%;
+}
+mat-card{
+    padding: 10px;
+}
+mat-card>*{
+    padding: 5px !important;
+}
+
+
+.transition{
+    transition: all 1s ease-in-out;
+}
+
+a{
+    color:var(--ng-primary-color);
+    text-decoration-line: none;
+}
+
+.pagination-padding{
+    padding-bottom: 6rem;
+}

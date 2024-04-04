@@ -1,0 +1,12 @@
+mat-card {
+    height: 100%;
+
+    .card-image-container {
+        height: 100%;
+
+        img {
+            height: 100%;
+            aspect-ratio: 1;
+        }
+    }
+}
