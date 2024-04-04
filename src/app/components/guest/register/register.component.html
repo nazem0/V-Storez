@@ -1,24 +1,24 @@
 <div class="min-vh-100 d-flex flex-column justify-content-center align-items-center">
   <mat-card class="w-50">
     <mat-card-header>
-      <mat-card-title>{{"Register" | translate}}</mat-card-title>
+      <mat-card-title>{{"Register" }}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <mat-stepper orientation="vertical" animationDuration="800ms" [linear]="true" #stepper>
         <!-- Step 1 -->
         <mat-step [stepControl]="personal">
           <form [formGroup]="personal">
-            <ng-template matStepLabel>{{"PersonalInfo" | translate}}</ng-template>
+            <ng-template matStepLabel>{{"PersonalInfo" }}</ng-template>
             <mat-form-field>
-              <mat-label>{{"FirstName" | translate}}</mat-label>
+              <mat-label>{{"FirstName" }}</mat-label>
               <input matInput formControlName="firstName" required>
             </mat-form-field>
             <mat-form-field>
-              <mat-label>{{"LastName" | translate}}</mat-label>
+              <mat-label>{{"LastName" }}</mat-label>
               <input matInput formControlName="lastName" required>
             </mat-form-field>
             <mat-form-field>
-              <mat-label>{{"PhoneNumber"|translate}}</mat-label>
+              <mat-label>{{"PhoneNumber"}}</mat-label>
               <input matInput placeholder="01234567890" formControlName="phoneNumber">
               <mat-error *ngIf="credentails.get('PhoneNumber')?.hasError('pattern')">
                 Please enter a valid phone number.
@@ -27,7 +27,7 @@
             <div>
               <button mat-raised-button color="primary" [disabled]="personal.invalid" matStepperNext>
                 <mat-icon>arrow_downward</mat-icon>
-                {{"Next"|translate}}
+                {{"Next"}}
               </button>
 
             </div>
@@ -37,16 +37,16 @@
         <!-- Step 2 -->
         <mat-step [stepControl]="credentails">
           <form [formGroup]="credentails">
-            <ng-template matStepLabel>{{"Credentials" | translate}}</ng-template>
+            <ng-template matStepLabel>{{"Credentials" }}</ng-template>
             <mat-form-field>
-              <mat-label>{{"Email" | translate}}</mat-label>
+              <mat-label>{{"Email" }}</mat-label>
               <input matInput placeholder="username@domain.com" formControlName="email" required>
               <mat-error *ngIf="credentails.get('Email')?.hasError('pattern')">
                 Please enter a valid email address.
               </mat-error>
             </mat-form-field>
             <mat-form-field>
-              <mat-label>{{"Password" | translate}}</mat-label>
+              <mat-label>{{"Password" }}</mat-label>
               <input matInput type="password" placeholder="Password" formControlName="password" required #password>
 
               <mat-error *ngIf="credentails.get('Password')?.hasError('pattern')">
@@ -56,11 +56,11 @@
             <div class="d-flex flex-wrap gap-2">
               <button mat-raised-button color="primary" matStepperNext [disabled]="credentails.invalid">
                 <mat-icon>arrow_downward</mat-icon>
-                {{"Next"|translate}}
+                {{"Next"}}
               </button>
               <button mat-raised-button color="warn" matStepperPrevious>
                 <mat-icon>arrow_upward</mat-icon>
-                {{"Back"|translate}}
+                {{"Back"}}
               </button>
             </div>
           </form>
@@ -68,25 +68,25 @@
 
         <!-- Step 3 -->
         <mat-step>
-          <ng-template matStepLabel>{{"Done" | translate}}</ng-template>
+          <ng-template matStepLabel>{{"Done" }}</ng-template>
           <div class="d-flex flex-wrap gap-2">
             <button mat-raised-button color="primary" [disabled]="personal.invalid && credentails.invalid"
             (click)="register()">
-              {{"Register"|translate}}
+              {{"Register"}}
             </button>
             <button mat-raised-button color="warn" matStepperPrevious>
               <mat-icon>arrow_upward</mat-icon>
-              {{"Back"|translate}}
+              {{"Back"}}
             </button>
-            <button mat-raised-button class="bg-danger text-white" (click)="stepper.reset()">{{"Reset"|translate}}</button>
+            <button mat-raised-button class="bg-danger text-white" (click)="stepper.reset()">{{"Reset"}}</button>
           </div>
         </mat-step>
       </mat-stepper>
     </mat-card-content>
     <mat-card-footer>
       <div>
-        <span>{{"AlreadyHaveAccount"|translate}} </span>
-        <a routerLink="/login" class="mdc-theme--primary">{{"Login"|translate}}</a>
+        <span>{{"AlreadyHaveAccount"}} </span>
+        <a routerLink="/login" class="mdc-theme--primary">{{"Login"}}</a>
       </div>
     </mat-card-footer>
   </mat-card>

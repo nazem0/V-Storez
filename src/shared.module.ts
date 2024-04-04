@@ -10,8 +10,6 @@ import { LoginComponent } from './app/components/guest/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
-import { I18nModule } from './i18n/i18n.module';
-import { TranslateModule, TranslateStore } from '@ngx-translate/core';
 
 
 
@@ -31,8 +29,6 @@ import { TranslateModule, TranslateStore } from '@ngx-translate/core';
     ReactiveFormsModule,
     MatCheckboxModule,
     MatCardModule,
-    I18nModule,
-    TranslateModule
   ],
   exports:[
     CommonModule,
@@ -42,9 +38,6 @@ import { TranslateModule, TranslateStore } from '@ngx-translate/core';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    I18nModule,
-    TranslateModule,
   ],
-  providers:[TranslateStore]
 })
 export class SharedModule { }
